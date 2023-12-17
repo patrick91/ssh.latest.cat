@@ -321,7 +321,7 @@ func fetchVersion(slug string) tea.Cmd {
 		}
 
 		response, err := http.Post(
-			"https://latest.cat/graphql",
+			"https://latest-cat.fly.dev/graphql",
 			"application/json",
 			bytes.NewBuffer(json_data),
 		)
