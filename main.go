@@ -93,7 +93,7 @@ func main() {
 		wish.WithAddress(fmt.Sprintf("%s:%d", host, port)),
 		wish.WithHostKeyPath(".ssh/term_info_ed25519"),
 		wish.WithMiddleware(
-			bm.Middleware(teaHandler),
+			bm.MiddlewareWithColorProfile(teaHandler, termenv.ANSI256),
 			lm.Middleware(),
 		),
 	)
